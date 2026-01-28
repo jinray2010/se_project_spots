@@ -11,4 +11,4 @@ project and some challenges I faced while building it.
 
 ## See the website
 
-Check out the website [here] (https://jinray2010.github.io/se_project_spots/)
+Check out the website [here](https://jinray2010.github.io/se_project_spots/)
