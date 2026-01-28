@@ -89,6 +89,7 @@
 
   .profile__avatar {
     flex-direction: column;
+    align-items: center;
     gap: 12px;
   }
 
@@ -97,8 +98,13 @@
     align-items: center;
   }
 
+  .profile__text-name {
+    text-align: center;
+  }
+
   .profile__text-subtitle {
-    margin-bottom: 32px;
+    margin: 0 auto 32px;
+    text-align: center;
   }
 
   .profile__edit {
