@@ -16,6 +16,7 @@
         <img src="./images/Logo.svg" alt="Logo" />
       </header>
       <main class="content">
+        <h1 class="content__hidden-header">My Profile</h1>
         <section class="profile">
           <div class="profile__avatar">
             <img
@@ -26,109 +27,111 @@
             <div class="profile__text">
               <h2 class="profile__text-name">Bessie Coleman</h2>
               <p class="profile__text-subtitle">Civil Aviator</p>
-              <a href="#" class="profile__edit">
+              <button type="button" href="#" class="profile__edit">
                 <img src="./images/Edit Icon.svg" alt="" />
                 <p class="profile__edit-text">Edit Profile</p>
-              </a>
+              </button>
             </div>
           </div>
-          <button class="profile__new-post">
+          <button type="button" class="profile__new-post">
             <img src="./images/Plus icon.svg" alt="Plus" />
             New Post
           </button>
         </section>
-        <section class="cards">
-          <div class="card">
+        <ul class="cards">
+          <li class="card">
             <div class="card__image-container">
               <img
                 src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="1st post"
+                alt="Val Thorien"
                 class="card__image"
               />
             </div>
             <div class="card__meta">
-              <span> Val Thorien</span>
-              <div class="card__like">
+              <p class="card__caption">Val Thorien</p>
+              <button type="button" class="card__like">
                 <img src="./images/Like Icon.svg" alt="Like" />
-              </div>
+              </button>
             </div>
-          </div>
-          <div class="card">
+          </li>
+          <li class="card">
             <div class="card__image-container">
               <img
                 src="./images/2-photo-by-ceiline-from-pexels.jpg"
-                alt="2nd post"
+                alt="Resturaunt Terrace"
                 class="card__image"
               />
             </div>
             <div class="card__meta">
-              <span> Resturaunt Terrace</span>
-              <div class="card__like">
+              <p class="card__caption">Resturaunt Terrace</p>
+              <button type="button" class="card__like">
                 <img src="./images/Like Icon.svg" alt="Like" />
-              </div>
+              </button>
             </div>
-          </div>
-          <div class="card">
+          </li>
+          <li class="card">
             <div class="card__image-container">
               <img
                 src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-                alt="3rd post"
+                alt="Cafe"
                 class="card__image"
               />
             </div>
             <div class="card__meta">
-              <span> An outdoor cafe</span>
-              <div class="card__like">
+              <p class="card__caption">An outdoor cafe</p>
+              <button type="button" class="card__like">
                 <img src="./images/Like Icon.svg" alt="Like" />
-              </div>
+              </button>
             </div>
-          </div>
-          <div class="card">
+          </li>
+          <li class="card">
             <div class="card__image-container">
               <img
                 src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-                alt="4th post"
+                alt="Bridge"
                 class="card__image"
               />
             </div>
             <div class="card__meta">
-              <span> A very long bridge, over the forest...</span>
-              <div class="card__like">
+              <p class="card__caption">
+                A very long bridge, over the forest...
+              </p>
+              <button type="button" class="card__like">
                 <img src="./images/Like Icon.svg" alt="Like" />
-              </div>
+              </button>
             </div>
-          </div>
-          <div class="card">
+          </li>
+          <li class="card">
             <div class="card__image-container">
               <img
                 src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-                alt="5th post"
+                alt="Tunnel"
                 class="card__image"
               />
             </div>
             <div class="card__meta">
-              <span> Tunnel with morning light</span>
-              <div class="card__like">
+              <p class="card__caption">Tunnel with morning light</p>
+              <button type="button" class="card__like">
                 <img src="./images/Like Icon.svg" alt="Like" />
-              </div>
+              </button>
             </div>
-          </div>
-          <div class="card">
+          </li>
+          <li class="card">
             <div class="card__image-container">
               <img
                 src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="6th post"
+                alt="Mountain house"
                 class="card__image"
               />
             </div>
             <div class="card__meta">
-              <span> Mountain house</span>
-              <div class="card__like">
+              <p class="card__caption">Mountain house</p>
+              <button type="button" class="card__like">
                 <img src="./images/Like Icon.svg" alt="Like" />
-              </div>
+              </button>
             </div>
-          </div>
-        </section>
+          </li>
+        </ul>
       </main>
       <footer class="footer">
         <p>2026 © spots</p>

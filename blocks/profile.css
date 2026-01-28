@@ -5,8 +5,8 @@
   max-width: 1280px;
   margin: 0 auto;
   font-size: 16px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 34px 0 20px;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.4);
 }
 
 .profile__avatar {
@@ -17,6 +17,8 @@
 
 .profile__image {
   border-radius: 16px;
+  max-width: 190px;
+  max-height: 190px;
 }
 
 .profile__text {
@@ -49,12 +51,16 @@
 }
 
 .profile__edit {
+  align-self: flex-start;
   margin-top: auto;
   display: flex;
   align-items: center;
   gap: 8px;
   text-decoration: none;
   color: #212121;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .profile__edit:hover {
@@ -72,13 +78,14 @@
   color: #fcf5e5;
   background-color: #212121;
   border: none;
+  cursor: pointer;
 }
 
 .profile__new-post:hover {
   opacity: 80%;
 }
 
-@media screen and (max-width: 630px) and (min-width: 330px) {
+@media screen and (max-width: 630px) and (min-width: 320px) {
   .profile {
     flex-direction: column;
     justify-content: space-between;
@@ -108,13 +115,15 @@
   }
 
   .profile__edit {
-    max-height: 16px;
+    align-self: center;
+    line-height: 16px;
     margin-bottom: 20px;
+    min-height: 44px;
   }
 
   .profile__image {
-    max-width: 90px;
-    max-height: 90px;
+    max-width: 80px;
+    max-height: 80px;
   }
 
   .profile__new-post {
