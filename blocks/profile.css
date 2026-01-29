@@ -37,6 +37,10 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   width: 100%;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 100%;
+  font-style: medium;
 }
 
 .profile__text-subtitle {
@@ -48,6 +52,10 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
+  font-style: medium;
 }
 
 .profile__edit {
@@ -71,7 +79,6 @@
   align-self: flex-end;
   display: flex;
   gap: 8px;
-  margin-bottom: 20px;
   padding: 20px 24px;
   border-radius: 8px;
   font-size: 16px;
@@ -118,7 +125,6 @@
     align-self: center;
     line-height: 16px;
     margin-bottom: 20px;
-    min-height: 44px;
   }
 
   .profile__image {
