@@ -2,7 +2,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
-  font-style: medium;
+  font-style: normal;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -40,6 +40,8 @@
 .modal__exit {
   opacity: 40%;
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
 .modal__exit:hover {
@@ -75,14 +77,22 @@
   border-radius: 8px;
   padding: 16px 12px;
   border: 1px solid rgba(33, 33, 33, 0.4);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .modal__submit {
+  cursor: pointer;
+  border: none;
   max-width: 156px;
   padding: 18px 58px;
   border-radius: 8px;
   background-color: #212121;
   color: #fcf5e5;
+}
+
+.modal__submit:hover {
+  opacity: 80%;
 }
 
 .modal_is-opened {

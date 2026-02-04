@@ -40,7 +40,7 @@
   font-size: 32px;
   font-weight: 500;
   line-height: 100%;
-  font-style: medium;
+  font-style: normal;
 }
 
 .profile__text-description {
@@ -55,7 +55,7 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 100%;
-  font-style: medium;
+  font-style: normal;
 }
 
 .profile__edit {
