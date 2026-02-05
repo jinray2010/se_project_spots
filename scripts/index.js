@@ -1,3 +1,30 @@
+const initialCards = [
+  {
+    name: "Val Thorien",
+    link: "./images/1-photo-by-moritz-feldmann-from-pexels.jpg",
+  },
+  {
+    name: "Resturaunt Terrace",
+    link: "./images/2-photo-by-ceiline-from-pexels.jpg",
+  },
+  {
+    name: "An outdoor cafe",
+    link: "./images/3-photo-by-tubanur-dogan-from-pexels.jpg",
+  },
+  {
+    name: "A very long bridge, over the forest...",
+    link: "./images/4-photo-by-maurice-laschet-from-pexels.jpg",
+  },
+  {
+    name: "Tunnel with morning light",
+    link: "./images/5-photo-by-van-anh-nguyen-from-pexels.jpg",
+  },
+  {
+    name: "Mountain house",
+    link: "./images/6-photo-by-moritz-feldmann-from-pexels.jpg",
+  },
+];
+
 const profile = document.querySelector(".profile");
 const editProfileBtn = profile.querySelector(".profile__edit");
 const newPostBtn = profile.querySelector(".profile__new-post");
@@ -55,4 +82,8 @@ newPostForm.addEventListener("submit", function (evt) {
   console.log(newPostLinkInput.value);
   console.log(newPostCaptionInput.value);
   closeModal(newPostModal);
+});
+
+initialCards.forEach(function (pic) {
+  console.log(pic.name);
 });
