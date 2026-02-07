@@ -25,6 +25,9 @@ const initialCards = [
   },
 ];
 
+const cardTemplate = document.querySelector("#card-template").content;
+const cardsContainer = document.querySelector(".cards");
+
 const profile = document.querySelector(".profile");
 const editProfileBtn = profile.querySelector(".profile__edit");
 const newPostBtn = profile.querySelector(".profile__new-post");
@@ -44,12 +47,47 @@ const newPostForm = newPostModal.querySelector(".modal__form");
 const newPostLinkInput = newPostModal.querySelector("#link");
 const newPostCaptionInput = newPostModal.querySelector("#caption");
 
+const previewModal = document.querySelector("#preview-modal");
+const previewLink = previewModal.querySelector(".modal__preview-image");
+const previewExit = previewModal.querySelector(".modal__preview-exit");
+const previewCaption = previewModal.querySelector(".modal__preview-text");
+
 function openModal(obj) {
   obj.classList.add("modal_is-opened");
 }
 
 function closeModal(obj) {
   obj.classList.remove("modal_is-opened");
+}
+
+function getCardElement(data) {
+  const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
+
+  const cardCaption = cardElement.querySelector(".card__caption");
+  cardCaption.textContent = data.name;
+
+  const cardLink = cardElement.querySelector(".card__image");
+  cardLink.src = data.link;
+  cardLink.alt = data.name;
+
+  const cardLike = cardElement.querySelector(".card__like");
+  cardLike.addEventListener("click", () => {
+    cardLike.classList.toggle("card__like_active");
+  });
+
+  const cardTrash = cardElement.querySelector(".card__trash");
+  cardTrash.addEventListener("click", () => {
+    cardElement.remove();
+  });
+
+  cardLink.addEventListener("click", () => {
+    previewCaption.textContent = data.name;
+    previewLink.src = data.link;
+    previewLink.alt = data.name;
+    openModal(previewModal);
+  });
+
+  return cardElement;
 }
 
 editProfileBtn.addEventListener("click", function () {
@@ -79,11 +117,16 @@ newPostCloseBtn.addEventListener("click", function () {
 
 newPostForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
-  console.log(newPostLinkInput.value);
-  console.log(newPostCaptionInput.value);
+  cardsContainer.prepend(
+    getCardElement({ name: newPostCaptionInput.value, link: newPostLinkInput }),
+  );
   closeModal(newPostModal);
 });
 
+previewExit.addEventListener("click", () => {
+  closeModal(previewModal);
+});
+
 initialCards.forEach(function (pic) {
-  console.log(pic.name);
+  cardsContainer.prepend(getCardElement(pic));
 });

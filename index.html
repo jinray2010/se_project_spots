@@ -39,86 +39,20 @@
           </button>
         </section>
         <ul class="cards">
-          <li class="card">
-            <img
-              src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-              alt="Val Thorien"
-              class="card__image"
-            />
-            <div class="card__meta">
-              <p class="card__caption">Val Thorien</p>
-              <button type="button" class="card__like">
-                <img src="./images/Like-Icon.svg" alt="Like" />
+          <template id="card-template">
+            <li class="card">
+              <img src="" alt="" class="card__image" />
+              <button type="button" class="card__trash">
+                <img src="./images/Trash-icon.svg" alt="Trash" />
               </button>
-            </div>
-          </li>
-          <li class="card">
-            <img
-              src="./images/2-photo-by-ceiline-from-pexels.jpg"
-              alt="Resturaunt Terrace"
-              class="card__image"
-            />
-            <div class="card__meta">
-              <p class="card__caption">Resturaunt Terrace</p>
-              <button type="button" class="card__like">
-                <img src="./images/Like-Icon.svg" alt="Like" />
-              </button>
-            </div>
-          </li>
-          <li class="card">
-            <img
-              src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-              alt="Cafe"
-              class="card__image"
-            />
-            <div class="card__meta">
-              <p class="card__caption">An outdoor cafe</p>
-              <button type="button" class="card__like">
-                <img src="./images/Like-Icon.svg" alt="Like" />
-              </button>
-            </div>
-          </li>
-          <li class="card">
-            <img
-              src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-              alt="Bridge"
-              class="card__image"
-            />
-            <div class="card__meta">
-              <p class="card__caption">
-                A very long bridge, over the forest...
-              </p>
-              <button type="button" class="card__like">
-                <img src="./images/Like-Icon.svg" alt="Like" />
-              </button>
-            </div>
-          </li>
-          <li class="card">
-            <img
-              src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-              alt="Tunnel"
-              class="card__image"
-            />
-            <div class="card__meta">
-              <p class="card__caption">Tunnel with morning light</p>
-              <button type="button" class="card__like">
-                <img src="./images/Like-Icon.svg" alt="Like" />
-              </button>
-            </div>
-          </li>
-          <li class="card">
-            <img
-              src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-              alt="Mountain house"
-              class="card__image"
-            />
-            <div class="card__meta">
-              <p class="card__caption">Mountain house</p>
-              <button type="button" class="card__like">
-                <img src="./images/Like-Icon.svg" alt="Like" />
-              </button>
-            </div>
-          </li>
+              <div class="card__meta">
+                <p class="card__caption"></p>
+                <button type="button" class="card__like">
+                  <img src="./images/Like-Icon.svg" alt="Like" />
+                </button>
+              </div>
+            </li>
+          </template>
         </ul>
       </main>
       <footer class="footer">
@@ -187,6 +121,18 @@
           </div>
           <button type="submit" class="modal__submit">Save</button>
         </form>
+      </div>
+    </div>
+    <div class="modal" id="preview-modal">
+      <div class="modal__preview">
+        <img
+          src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+          class="modal__preview-image"
+        />
+        <button type="button" class="modal__preview-exit">
+          <img src="./images/Exit-icon-white.svg" alt="exit" />
+        </button>
+        <p class="modal__preview-text">Val Thoriens</p>
       </div>
     </div>
     <script src="./scripts/index.js"></script>
