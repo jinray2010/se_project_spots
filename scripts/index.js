@@ -118,9 +118,13 @@ newPostCloseBtn.addEventListener("click", function () {
 newPostForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
   cardsContainer.prepend(
-    getCardElement({ name: newPostCaptionInput.value, link: newPostLinkInput }),
+    getCardElement({
+      name: newPostCaptionInput.value,
+      link: newPostLinkInput.value,
+    }),
   );
   closeModal(newPostModal);
+  evt.target.removeEventListener();
 });
 
 previewExit.addEventListener("click", () => {
