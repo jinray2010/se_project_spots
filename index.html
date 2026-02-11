@@ -110,6 +110,7 @@
               class="modal__input"
               id="link"
               placeholder="Paste a link to the picture"
+              required
             />
           </div>
           <div class="modal__input-line">
@@ -119,6 +120,7 @@
               class="modal__input"
               id="caption"
               placeholder="Type your caption"
+              required
             />
           </div>
           <button type="submit" class="modal__submit">Save</button>
@@ -128,7 +130,7 @@
     <div class="modal" id="preview-modal">
       <div class="modal__preview">
         <img src="" alt="" class="modal__preview-image" />
-        <button type="button" class="modal__preview-exit">
+        <button type="button" class="modal__exit modal__exit_type_preview">
           <img src="./images/Exit-icon-white.svg" alt="exit" />
         </button>
         <p class="modal__preview-text"></p>

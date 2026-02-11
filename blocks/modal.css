@@ -110,13 +110,9 @@
   max-height: 80vh;
 }
 
-.modal__preview-exit {
+.modal__exit_type_preview {
   position: absolute;
   right: -52.5px;
-  padding: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
 }
 
 .modal__preview-exit:hover {
@@ -169,7 +165,7 @@
     max-height: 90vh;
   }
 
-  .modal__preview-exit {
+  .modal__exit_type_preview {
     top: -48px;
     right: 0px;
   }

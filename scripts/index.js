@@ -49,7 +49,7 @@ const newPostCaptionInput = newPostModal.querySelector("#caption");
 
 const previewModal = document.querySelector("#preview-modal");
 const previewLink = previewModal.querySelector(".modal__preview-image");
-const previewExit = previewModal.querySelector(".modal__preview-exit");
+const previewExit = previewModal.querySelector(".modal__exit_type_preview");
 const previewCaption = previewModal.querySelector(".modal__preview-text");
 
 function openModal(obj) {
@@ -123,8 +123,8 @@ newPostForm.addEventListener("submit", function (evt) {
       link: newPostLinkInput.value,
     }),
   );
+  newPostForm.reset();
   closeModal(newPostModal);
-  evt.target.removeEventListener();
 });
 
 previewExit.addEventListener("click", () => {
